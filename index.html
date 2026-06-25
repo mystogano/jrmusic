@@ -1,1 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Folk Songwriter | Portfolio</title>
+    <style>
+        /* Global Styles & Color Palette */
+        :root {
+            --bg-color: #f7f5f0;       /* Warm linen / cream */
+            --text-color: #2c2a29;     /* Deep charcoal */
+            --accent-color: #8c6239;   /* Warm wood / earth tone */
+            --card-bg: #ffffff;        /* Crisp white for cards */
+            --border-color: #e3dec34;  /* Soft separator lines */
+            --font-stack: 'Georgia', serif; /* Classic, storytelling font */
+            --sans-font: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-stack);
+            line-height: 1.7;
+            padding: 0 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            border-bottom: 1px solid #e1dbd6;
+            font-family: var(--sans-font);
+        }
+
+        .logo {
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        header {
+            padding: 100px 0 80px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #615e5c;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Sections General */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #e1dbd6;
+        }
+
+        section h2 {
+            font-family: var(--sans-font);
+            font-size: 1.3rem;
+            color: var(--accent-color);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Discography / Music Grid */
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .music-card {
+            background: var(--card-bg);
+            border: 1px solid #e1dbd6;
+            padding: 24px;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .music-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px rgba(140, 98, 57, 0.08);
+        }
+
+        .music-card h3 {
+            color: var(--text-color);
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        .music-card p {
+            color: #615e5c;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .listen-btn {
+            display: inline-block;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-family: var(--sans-font);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Contact & Socials */
+        .contact-content {
+            text-align: center;
+        }
+
+        .social-links {
+            margin-top: 30px;
+            font-family: var(--sans-font);
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            font-family: var(--sans-font);
+            font-size: 0.8rem;
+            color: #8c8885;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2.4rem; }
+            nav { flex-direction: column; gap: 15px; }
+            .nav-links a { margin: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">Grace & Acoustic</div>
+            <div class="nav-links">
+                <a href="#heart">The Heart</a>
+                <a href="#songs">Songs</a>
+                <a href="#connect">Connect</a>
+            </div>
+        </nav>
+
+        <!-- Hero Header -->
+        <header>
+            <h1>Folk & Christian Songwriting</h1>
+            <p>"Weaving ancient truths with acoustic strings, capturing the beauty of faith, doubt, and redemption in the quiet spaces."</p>
+        </header>
+
+        <!-- About / Heart Section -->
+        <section id="heart">
+            <h2>The Heart Behind the Music</h2>
+            <p>Welcome. I am an independent songwriter exploring the intersection of traditional acoustic folk music and deep, scriptural storytelling. My music is stripped-back, lyric-driven, and focused on the timeless themes of grace, worship, and walking through the wilderness. Every track is an invitation to pause, breathe, and reflect on the Creator.</p>
+        </section>
+
+        <!-- Music Section -->
+        <section id="songs">
+            <h2>The Songs</h2>
+            <div class="music-grid">
+                <!-- Project 1 -->
+                <div class="music-card">
+                    <h3>Wilderness Hymns</h3>
+                    <p>An acoustic collection exploring seasons of waiting, enduring faith, and finding peace in the unknown.</p>
+                    <a href="#" class="listen-btn">Listen &rarr;</a>
+                </div>
+                <!-- Project 2 -->
+                <div class="music-card">
+                    <h3>Dust & Breath</h3>
+                    <p>Raw, single-take living room recordings focused on grace, humility, and the poetry of Scripture.</p>
+                    <a href="#" class="listen-btn">Listen &rarr;</a>
+                </div>
+                <!-- Project 3 -->
+                <div class="music-card">
+                    <h3>Rivers in the Desert</h3>
+                    <p>Cinematic indie-folk arrangements celebrating the joy of restoration and redemption.</p>
+                    <a href="#" class="listen-btn">Listen &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="connect">
+            <div class="contact-content">
+                <h2>Let's Connect</h2>
+                <p>Available for church gatherings, living room worship sessions, independent scoring, or lyric collaborations. Let's build community together.</p>
+                <div class="social-links">
+                    <a href="mailto:your.email@example.com">Email Me</a>
+                    <a href="#" target="_blank">Spotify</a>
+                    <a href="#" target="_blank">YouTube</a>
+                    <a href="#" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Folk & Christian Songwriting. Soli Deo Gloria.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
 
