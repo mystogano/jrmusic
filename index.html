@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christian Folk Songwriter | Portfolio</title>
+    <title>Independent Christian Folk Songwriter & Composer</title>
     <style>
-        /* Global Styles & Color Palette */
+        /* Modern Professional Typography & Layout */
         :root {
-            --bg-color: #f7f5f0;       /* Warm linen / cream */
-            --text-color: #2c2a29;     /* Deep charcoal */
-            --accent-color: #8c6239;   /* Warm wood / earth tone */
-            --card-bg: #ffffff;        /* Crisp white for cards */
-            --border-color: #e3dec34;  /* Soft separator lines */
-            --font-stack: 'Georgia', serif; /* Classic, storytelling font */
-            --sans-font: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --bg-color: #fcfbfa;       /* Premium gallery/off-white */
+            --text-color: #1f1e1d;     /* Deep near-black */
+            --text-muted: #66625f;    /* Elegant slate grey */
+            --accent-color: #705335;   /* Matte walnut brown */
+            --card-bg: #ffffff;
+            --border-light: #eae6e1;
+            --serif-font: 'Playfair Display', 'Georgia', serif;
+            --sans-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
         }
 
         * {
@@ -22,165 +23,201 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
-            font-family: var(--font-stack);
-            line-height: 1.7;
-            padding: 0 20px;
+            font-family: var(--sans-font);
+            line-height: 1.65;
+            letter-spacing: -0.01em;
+            padding: 0 24px;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        /* Navigation */
+        /* Minimal Header/Nav */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 30px 0;
-            border-bottom: 1px solid #e1dbd6;
-            font-family: var(--sans-font);
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border-light);
         }
 
         .logo {
-            font-size: 1rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            font-family: var(--serif-font);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-color);
+            text-decoration: none;
         }
 
         .nav-links a {
-            color: var(--text-color);
+            color: var(--text-muted);
             text-decoration: none;
-            margin-left: 20px;
+            margin-left: 28px;
             font-size: 0.9rem;
-            transition: color 0.3s;
+            font-weight: 500;
+            transition: color 0.25s ease;
         }
 
         .nav-links a:hover {
             color: var(--accent-color);
         }
 
-        /* Hero Section */
+        /* Hero / Introduction */
         header {
-            padding: 100px 0 80px 0;
-            text-align: center;
+            padding: 120px 0 80px 0;
         }
 
         header h1 {
-            font-size: 3rem;
+            font-family: var(--serif-font);
+            font-size: 3.5rem;
+            line-height: 1.15;
             color: var(--text-color);
-            margin-bottom: 15px;
-            font-weight: 400;
+            margin-bottom: 24px;
+            font-weight: 500;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            font-family: var(--serif-font);
             font-style: italic;
-            color: #615e5c;
-            max-width: 600px;
-            margin: 0 auto;
         }
 
-        /* Sections General */
+        /* Section Layouts */
         section {
-            padding: 60px 0;
-            border-bottom: 1px solid #e1dbd6;
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border-light);
         }
 
-        section h2 {
-            font-family: var(--sans-font);
-            font-size: 1.3rem;
+        .section-title {
+            font-size: 0.85rem;
+            font-weight: 600;
             color: var(--accent-color);
-            margin-bottom: 30px;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 0.15em;
+            margin-bottom: 32px;
         }
 
-        /* Discography / Music Grid */
-        .music-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-        }
-
-        .music-card {
-            background: var(--card-bg);
-            border: 1px solid #e1dbd6;
-            padding: 24px;
-            border-radius: 6px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .music-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 15px rgba(140, 98, 57, 0.08);
-        }
-
-        .music-card h3 {
+        /* Bio Layout */
+        .bio-text {
+            font-size: 1.1rem;
             color: var(--text-color);
-            margin-bottom: 8px;
-            font-size: 1.2rem;
-            font-weight: 400;
+            max-width: 760px;
         }
-
-        .music-card p {
-            color: #615e5c;
-            font-size: 0.95rem;
+        
+        .bio-text p {
             margin-bottom: 20px;
         }
 
-        .listen-btn {
-            display: inline-block;
-            color: var(--accent-color);
-            text-decoration: none;
-            font-family: var(--sans-font);
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        /* Spotify Integration Styling */
+        .music-showcase {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
         }
 
-        /* Contact & Socials */
-        .contact-content {
-            text-align: center;
+        .track-row {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
+            align-items: center;
         }
 
-        .social-links {
-            margin-top: 30px;
-            font-family: var(--sans-font);
+        .track-meta h3 {
+            font-family: var(--serif-font);
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 8px;
         }
 
-        .social-links a {
-            color: var(--text-color);
-            text-decoration: none;
-            margin: 0 15px;
+        .track-meta p {
+            color: var(--text-muted);
             font-size: 0.95rem;
-            transition: color 0.3s;
         }
 
-        .social-links a:hover {
+        .spotify-container {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background: transparent;
+            line-height: 0;
+        }
+
+        /* Contact & Professional Inquiries */
+        .contact-panel {
+            background: var(--card-bg);
+            border: 1px solid var(--border-light);
+            padding: 48px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+        }
+
+        .contact-panel p {
+            color: var(--text-muted);
+            max-width: 550px;
+            margin: 0 auto 32px auto;
+        }
+
+        .email-button {
+            display: inline-block;
+            background-color: var(--text-color);
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 32px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-radius: 4px;
+            transition: background-color 0.25s ease;
+        }
+
+        .email-button:hover {
+            background-color: var(--accent-color);
+        }
+
+        .links-secondary {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .links-secondary a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.25s;
+        }
+
+        .links-secondary a:hover {
             color: var(--accent-color);
         }
 
         /* Footer */
         footer {
-            padding: 40px 0;
+            padding: 60px 0;
             text-align: center;
-            font-family: var(--sans-font);
-            font-size: 0.8rem;
-            color: #8c8885;
+            font-size: 0.85rem;
+            color: #a39f9b;
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            header h1 { font-size: 2.4rem; }
-            nav { flex-direction: column; gap: 15px; }
-            .nav-links a { margin: 0 10px; }
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            .track-row { grid-template-columns: 1fr; gap: 16px; }
+            .contact-panel { padding: 32px 20px; }
+            nav { padding: 24px 0; }
         }
     </style>
 </head>
@@ -189,60 +226,72 @@
     <div class="container">
         <!-- Navigation -->
         <nav>
-            <div class="logo">Grace & Acoustic</div>
+            <a href="#" class="logo">Asher Evans</a> <!-- Replace with your name -->
             <div class="nav-links">
-                <a href="#heart">The Heart</a>
-                <a href="#songs">Songs</a>
-                <a href="#connect">Connect</a>
+                <a href="#about">About</a>
+                <a href="#music">Releases</a>
+                <a href="#contact">Inquiries</a>
             </div>
         </nav>
 
         <!-- Hero Header -->
         <header>
-            <h1>Folk & Christian Songwriting</h1>
-            <p>"Weaving ancient truths with acoustic strings, capturing the beauty of faith, doubt, and redemption in the quiet spaces."</p>
+            <h1>Contemporary Christian Folk Songwriter & Composer</h1>
+            <p>Blending scriptural depth with organic acoustic arrangements, written for the modern church and quiet spaces of reflection.</p>
         </header>
 
-        <!-- About / Heart Section -->
-        <section id="heart">
-            <h2>The Heart Behind the Music</h2>
-            <p>Welcome. I am an independent songwriter exploring the intersection of traditional acoustic folk music and deep, scriptural storytelling. My music is stripped-back, lyric-driven, and focused on the timeless themes of grace, worship, and walking through the wilderness. Every track is an invitation to pause, breathe, and reflect on the Creator.</p>
+        <!-- About Section -->
+        <section id="about">
+            <div class="section-title">The Profile</div>
+            <div class="bio-text">
+                <p>I am an independent songwriter and multi-instrumentalist specializing in lyric-driven acoustic music centered on themes of faith, grace, and redemption. My work seeks to balance the theological weight of historical hymns with the raw, intimate instrumentation of traditional roots and indie-folk.</p>
+                <p>Based out of the studio, I partner with local communities, independent filmmakers, and publishing labels to deliver authentic pieces that draw listeners into deep contemplation and worship.</p>
+            </div>
         </section>
 
-        <!-- Music Section -->
-        <section id="songs">
-            <h2>The Songs</h2>
-            <div class="music-grid">
-                <!-- Project 1 -->
-                <div class="music-card">
-                    <h3>Wilderness Hymns</h3>
-                    <p>An acoustic collection exploring seasons of waiting, enduring faith, and finding peace in the unknown.</p>
-                    <a href="#" class="listen-btn">Listen &rarr;</a>
+        <!-- Music Section with Spotify Embeds -->
+        <section id="music">
+            <div class="section-title">Selected Discography</div>
+            <div class="music-showcase">
+                
+                <!-- Track / Album 1 -->
+                <div class="track-row">
+                    <div class="track-meta">
+                        <h3>Wilderness Hymns</h3>
+                        <p>A 5-track conceptual EP exploring acoustic vulnerability, seasons of waiting, and persistent faith amid trials.</p>
+                    </div>
+                    <div class="spotify-container">
+                        <!-- Replace the src URL with your own Spotify Album or Track Embed link -->
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1DFixLWuPkv3Z3G7TySu81?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
                 </div>
-                <!-- Project 2 -->
-                <div class="music-card">
-                    <h3>Dust & Breath</h3>
-                    <p>Raw, single-take living room recordings focused on grace, humility, and the poetry of Scripture.</p>
-                    <a href="#" class="listen-btn">Listen &rarr;</a>
+
+                <!-- Track / Album 2 -->
+                <div class="track-row">
+                    <div class="track-meta">
+                        <h3>Dust & Breath</h3>
+                        <p>Recorded completely live. An exploration of scriptural poetry wrapped in minimalist finger-style guitar work.</p>
+                    </div>
+                    <div class="spotify-container">
+                        <!-- Replace the src URL with your own Spotify Album or Track Embed link -->
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4PTG3Z6ehGkBF3zI7Y9G78?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
                 </div>
-                <!-- Project 3 -->
-                <div class="music-card">
-                    <h3>Rivers in the Desert</h3>
-                    <p>Cinematic indie-folk arrangements celebrating the joy of restoration and redemption.</p>
-                    <a href="#" class="listen-btn">Listen &rarr;</a>
-                </div>
+
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="connect">
-            <div class="contact-content">
-                <h2>Let's Connect</h2>
-                <p>Available for church gatherings, living room worship sessions, independent scoring, or lyric collaborations. Let's build community together.</p>
-                <div class="social-links">
-                    <a href="mailto:your.email@example.com">Email Me</a>
-                    <a href="#" target="_blank">Spotify</a>
-                    <a href="#" target="_blank">YouTube</a>
+        <section id="contact">
+            <div class="contact-panel">
+                <div class="section-title" style="margin-bottom: 16px;">Professional Inquiries</div>
+                <p>For custom songwriting commissions, church worship workshops, film scoring, or synchronization licensing partnerships, please get in touch.</p>
+                
+                <a href="mailto:your.email@example.com" class="email-button">Contact via Email</a>
+                
+                <div class="links-secondary">
+                    <a href="#" target="_blank">Artist Profile</a>
+                    <a href="#" target="_blank">Apple Music</a>
                     <a href="#" target="_blank">Instagram</a>
                 </div>
             </div>
@@ -250,10 +299,9 @@
 
         <!-- Footer -->
         <footer>
-            <p>&copy; 2026 Folk & Christian Songwriting. Soli Deo Gloria.</p>
+            <p>&copy; 2026 Asher Evans Music. Soli Deo Gloria.</p>
         </footer>
     </div>
 
 </body>
 </html>
-
